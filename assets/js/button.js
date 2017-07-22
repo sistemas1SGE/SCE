@@ -1,0 +1,54 @@
+$("#empr_button").click(function(){
+	$(".view").hide();
+	$("#empr_view").show();
+});
+$("#sucu_button").click(function(){
+	$(".view").hide();
+	$("#sucu_view").show();
+});
+$("#depa_button").click(function(){
+	$(".view").hide();
+	$("#depa_view").show();
+});
+$("#empl_button").click(function(){
+	$(".view").hide();
+	$("#empl_view").show();
+});
+$("#perm_button").click(function(){
+	$(".view").hide();
+	$("#perm_view").show();
+});
+$("#prod_button").click(function(){
+	$(".view").hide();
+	$("#prod_view").show();
+});
+$("#pros_button").click(function(){
+	$(".view").hide();
+	$("#pros_view").show();
+});
+$("#agen_button").click(function(){
+	$(".view").hide();
+	$("#agen_view").show();
+});
+$("#clien_button").click(function(){
+	$(".view").hide();
+	$("#clien_view").show();
+});
+$("#inci_button").click(function(){
+	$(".view").hide();
+	$("#inci_view").show();
+});
+
+/*
+empr_button
+sucu_button
+depa_button
+empl_button
+perm_button
+prod_button
+pros_button
+agen_button
+clien_button
+inci_button
+*/
+
