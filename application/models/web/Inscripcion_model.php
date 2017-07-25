@@ -7,12 +7,19 @@ class Inscripcion_model extends CI_Model {
     }
     public function select()
     {
-        $query = $this->db->query('call get_Inscripcion("0")');
+        $query = $this->db->query(
+                'SELECT * '
+                . 'FROM inscripcion;');
   	return $query->result_array();
     }
     public function search($i)
     {
-        $query = $this->db->query('call get_Inscripcion('.$i.')');
+        $query = $this->db->query(
+                'SELECT inscripcion.*,direccion.*,contacto.*,estudiante.*,tutor.* '
+                . 'FROM inscripcion '
+                . 'INNER JOIN estudiante ON incripcion.estudiante_id = estudiante.estudiante_id '
+                . 'INNER JOIN tutor ON incripcion.tutor_id = tutor.tutor_id '
+                . 'WHERE inscripcion_id='.$i.';');
   	return $query->result_array();
         
     }

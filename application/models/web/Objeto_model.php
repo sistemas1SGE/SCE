@@ -7,7 +7,9 @@ class Objeto_model extends CI_Model {
     }
     public function select()
     {
-        $query = $this->db->query('call get_Objeto("0")');
+        $query = $this->db->query(
+                'SELECT * '
+                . 'FROM objetos;');
   	return $query->result_array();
     }
     public function search($i)

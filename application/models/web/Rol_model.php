@@ -7,7 +7,9 @@ class Rol_model extends CI_Model {
     }
     public function select()
     {
-        $query = $this->db->query('call get_Rol("0")');
+        $query = $this->db->query(
+                'SELECT * '
+                . 'FROM rol;');
   	return $query->result_array();
     }
     public function search($i)

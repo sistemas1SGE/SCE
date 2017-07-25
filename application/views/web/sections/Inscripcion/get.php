@@ -13,7 +13,7 @@
     <div class="col-md-9-center">
         <div class="box box-primary">
             <div class="box-header with-border pull-right">
-                <button type="button" class="btn btn-block btn-primary" id="newFrom-view" onclick="window.location.href='<?php echo base_url().'index.php/'.$titulo.'-from/0';?>';" title="Nuevo">
+                <button type="button" class="btn btn-block btn-primary" id="newFrom-view" onclick="window.location.href='<?php echo base_url().'index.php/'.$titulo.'-form/0';?>';" title="Nuevo">
                     <i class="fa fa-plus"> Nuevo</i>
                 </button>
             </div>
@@ -43,7 +43,7 @@
                                 <button type="button" class="btn btn-default btn-sm" onclick=""><i class="fa fa-file-pdf-o"></i></button>
                             </td>
                             <td>
-                                <button type="button" class="btn btn-default btn-sm" onclick='window.location.href="<?php echo base_url().'index.php/'.$titulo.'-from/'.$a;?>";'><i class="fa fa-pencil"></i></button>
+                                <button type="button" class="btn btn-default btn-sm" onclick='window.location.href="<?php echo base_url().'index.php/'.$titulo.'-form/'.$a;?>";'><i class="fa fa-pencil"></i></button>
                             </td>
                             <td>
                                 <button type="button" class="btn btn-default btn-sm"><i class="fa fa-trash-o"></i></button>
