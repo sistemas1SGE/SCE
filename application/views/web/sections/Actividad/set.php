@@ -24,14 +24,14 @@
                                             <div class="input-group-addon">
                                                 <i class="fa fa-futbol-o"></i>
                                             </div>
-                                        <input type="text" class="form-control"  name="" placeholder="Actividad" name="" id="" value="" required>
+                                        <input type="text" class="form-control" placeholder="Actividad" name="actividades_nombre" id="actividades_nombre" value="" required>
                                         </div>
                                     <label for="">Cupo</label>
                                         <div class="input-group">
                                             <div class="input-group-addon">
                                                 <i class="fa fa-child"></i>
                                             </div>
-                                        <input type="number" step="any" class="form-control" placeholder="Maximo de alumnos" name="" id="" value="" required>
+                                        <input type="number" step="any" class="form-control" placeholder="Maximo de alumnos" name="actividades_cupo" id="actividades_cupo" value="" required>
                                         </div>
                                     
                                     <div class="form-group">
@@ -41,14 +41,14 @@
                                             <div class="input-group-addon">
                                                 <i class="fa fa-clock-o"></i>
                                             </div>
-                                            <input type="text" class="form-control pull-right" name="" placeholder="Dia y hora" name="" id="" value="" required>
+                                            <input type="text" class="form-control pull-right" name="" placeholder="Dia y hora" name="actividades_horario" id="actividades_horario" value="" required>
                                         </div>
                                             <!-- /.input group -->
                                     </div>
                                 </div>
                             <div class="col-xs-6">
                                 <label for="contacto_nombre">Alumno</label>
-                                    <select class="form-control select2 select2-hidden-accessible" data-placeholder="Selecciona alumno" style="width: 100%;" tabindex="-1" aria-hidden="true" name="" id="" value="" required>
+                                    <select class="form-control select2 select2-hidden-accessible" data-placeholder="Selecciona alumno" style="width: 100%;" tabindex="-1" aria-hidden="true" name="estudiante_nombre" id="estudiante_nombre" value="" required>
                                         <option>Luis</option>
                                         <option>Maria</option>
                                         <option>Domm</option>
@@ -57,7 +57,7 @@
                                         <option>Matias</option>
                                     </select>
 				<label for="empresa_email2">Profesor</label>
-                                    <select class="form-control select2 select2-hidden-accessible" data-placeholder="Selecciona profesor" style="width: 100%;" tabindex="-1" aria-hidden="true" name="" id="" value="" required>
+                                    <select class="form-control select2 select2-hidden-accessible" data-placeholder="Selecciona profesor" style="width: 100%;" tabindex="-1" aria-hidden="true" name="maestros_nombres" id="maestros_nombres" value="" required>
                                         <option>Luis</option>
                                         <option>Maria</option>
                                         <option>Domm</option>

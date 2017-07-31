@@ -22,9 +22,9 @@
                                     <div class="form-group breadcrumb text-blue">
                                         <h4><b>Grado y grupo</b></h4>
                                         <label for="contacto_nombre">Grado</label>
-                                            <input type="number" class="form-control" placeholder="0" name="" id="" value="" required>
+                                            <input type="number" class="form-control" placeholder="0" name="grupo_grado" id="grupo_grado" value="" required>
 					<label for="contacto_apellidoMaterno">Grupo</label>
-                                            <input type="text" class="form-control" placeholder="A" name="" id="" value="" required>
+                                            <input type="text" class="form-control" placeholder="A" name="grupo_grupo" id="grupo_grupo" value="" required>
                                     </div>
                                 </div>
                             </div>

@@ -64,32 +64,32 @@
                                                             <tr>
                                                                 <th style="width: 10px">1</th>
                                                                 <th style="width: 20px">Unidad</th>
-                                                                <th style="width: 40px"><input type="number" step="any" name="" id="" value="" required/></th>
+                                                                <th style="width: 40px"><input type="number" step="any" name="calificaciones_primerMes" id="calificaciones_primerMes" value="" required/></th>
                                                             </tr>
                                                             <tr>
                                                                 <th style="width: 10px">2</th>
                                                                 <th style="width: 20px">Unidad</th>
-                                                                <th style="width: 40px"><input type="number" step="any" name="" id="" value="" required/></th>
+                                                                <th style="width: 40px"><input type="number" step="any" name="calificaciones_segundoMes" id="calificaciones_segundoMes" value="" required/></th>
                                                             </tr>
                                                             <tr>
                                                                 <th style="width: 10px">3</th>
                                                                 <th style="width: 20px">Unidad</th>
-                                                                <th style="width: 40px"><input type="number" step="any" name="" id="" required/></th>
+                                                                <th style="width: 40px"><input type="number" step="any" name="calificaciones_tercerMes" id="calificaciones_tercerMes" required/></th>
                                                             </tr>
                                                             <tr>
                                                                 <th style="width: 10px">4</th>
                                                                 <th style="width: 20px">Unidad</th>
-                                                                <th style="width: 40px"><input type="number" step="any" name="" id="" required/></th>
+                                                                <th style="width: 40px"><input type="number" step="any" name="calificaciones_cuartoMes" id="calificaciones_cuartoMes" required/></th>
                                                             </tr>
                                                             <tr>
                                                                 <th style="width: 10px">5</th>
                                                                 <th style="width: 20px">Unidad</th>
-                                                                <th style="width: 40px"><input type="number" step="any" name="" id="" required/></th>
+                                                                <th style="width: 40px"><input type="number" step="any" name="calificaciones_quintoMes" id="calificaciones_quintoMes" required/></th>
                                                             </tr>
                                                             <tr>
                                                                 <th style="width: 10px">6</th>
                                                                 <th style="width: 20px">Unidad</th>
-                                                                <th style="width: 40px"><input type="number" step="any" name="" id="" required/></th>
+                                                                <th style="width: 40px"><input type="number" step="any" name="calificaciones_sextoMes" id="calificaciones_sextoMes" required/></th>
                                                             </tr>
                                                         </tbody>
                                                     </table>

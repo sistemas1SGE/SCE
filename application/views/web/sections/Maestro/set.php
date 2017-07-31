@@ -24,28 +24,28 @@
                                             <div class="input-group-addon">
                                                 <i class="fa fa-font"></i>
                                             </div>
-                                        <input type="text" class="form-control" placeholder="Nombre" name="" id="" value="" required>
+                                        <input type="text" class="form-control" placeholder="Nombre" name="maestros_nombres" id="maestros_nombres" value="" required>
                                         </div>
                                             <h4 class="box-title"><b>Apellidos</b></h4>
                                         <div class="input-group">
                                             <div class="input-group-addon">
                                                 <i class="fa fa-font"></i>
                                             </div>
-                                        <input type="text" class="form-control" placeholder="Apellidos" name="" id="" value="" required>
+                                        <input type="text" class="form-control" placeholder="Apellidos" name="maestros_apellidos" id="maestros_apellidos" value="" required>
                                         </div>
                                             <h4 class="box-title"><b>Folio de INE</b></h4>
                                         <div class="input-group">
                                             <div class="input-group-addon">
                                                 <i class="fa fa-list-alt"></i>
                                             </div>
-                                        <input type="text" class="form-control" placeholder="INE" name="" id="" value="" required>
+                                        <input type="text" class="form-control" placeholder="INE" name="maestros_ineFolio" id="maestros_ineFolio" value="" required>
                                         </div>
                                             <h4 class="box-title"><b>Especialidad</b></h4>
                                         <div class="input-group">
                                             <div class="input-group-addon">
                                                 <i class="fa fa-black-tie"></i>
                                             </div>
-                                        <input type="text" class="form-control" placeholder="Especialidad" name="" id="" value="" required>
+                                        <input type="text" class="form-control" placeholder="Especialidad" name="maestros_especialidad" id="maestros_especialidad" value="" required>
                                         </div>
                                         <br/>
                                 </div>
@@ -62,19 +62,19 @@
                                             <div class="input-group-addon">
                                                 <i class="fa fa-phone"></i>
                                             </div>
-                                            <input type="text" class="form-control" data-inputmask="&quot;mask&quot;: &quot;(99) 9999-9999&quot;" data-mask="" name="" id="" value="" required>
+                                            <input type="text" class="form-control" data-inputmask="&quot;mask&quot;: &quot;(99) 9999-9999&quot;" data-mask="" name="contacto_telefono" id="contacto_telefono" value="" required>
                                         </div>
                                     <h4 class="box-title" ><b>Red Social</b></h4>
                                         <div class="input-group">
                                             <div class="input-group-addon">
                                                 <i class="fa fa-facebook"></i>
                                             </div>
-                                        <input type="text" class="form-control" placeholder="Facebook" name="" id="" value="" required>
+                                        <input type="text" class="form-control" placeholder="Facebook" name="contacto_redesSociales" id="contacto_redesSociales" value="" required>
                                         </div>
                                     <h4 class="box-title"><b>Correo</b></h4>
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                                            <input type="email" class="form-control" placeholder="Email">
+                                            <input type="email" class="form-control" placeholder="Email" name="contacto_correo" id="contacto_correo">
                                         </div>
                                 </div> 
                                 <div class="col-xs-12">
@@ -82,72 +82,72 @@
                                     <h4><b>Calle</b></h4>
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-dedent"></i></span>
-                                        <input type="text" class="form-control" placeholder="Calle" name="" id="" value="" required>
+                                        <input type="text" class="form-control" placeholder="Calle" name="direccion_calle" id="direccion_calle" value="" required>
                                         </div>
                                     <h4 class="box-title" ><b>Entre calle</b></h4>
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-dedent"></i></span>
-                                        <input type="text" class="form-control" placeholder="1 calle" name="" id="" value="" required>
+                                        <input type="text" class="form-control" placeholder="1 calle" name="direccion_entreCalles1" id="direccion_entreCalles1" value="" required>
                                         </div>
                                     <h4 class="box-title" ><b> Y calle</b></h4>
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-dedent"></i></span>
-                                        <input type="text" class="form-control" placeholder="2 Calle" name="" id="" value="" required>
+                                        <input type="text" class="form-control" placeholder="2 Calle" name="direccion_entreCalles2" id="direccion_entreCalles2" value="" required>
                                         </div>
                                     <h4 class="box-title" ><b>Numero</b></h4>
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-dedent"></i></span>
-                                        <input type="text" class="form-control" placeholder="numero" name="" id="" value="" required>
+                                        <input type="text" class="form-control" placeholder="numero" name="direccion_numero" id="direccion_numero" value="" required>
                                         </div>
                                     <h4 class="box-title" ><b>Manzana</b></h4>
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-dedent"></i></span>
-                                        <input type="text" class="form-control" placeholder="Nombre" name="" id="" value="0" required>
+                                        <input type="text" class="form-control" placeholder="Nombre" name="direccion_manzana" id="direccion_manzana" value="0" required>
                                         </div>
                                     <h4 class="box-title" ><b>Lote</b></h4>
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-dedent"></i></span>
-                                        <input type="text" class="form-control" placeholder="Nombre" name="" id="" value="0" required>
+                                        <input type="text" class="form-control" placeholder="Nombre" name="direccion_lote" id="direccion_lote" value="0" required>
                                         </div>
                                     <h4 class="box-title" ><b>Numero interior</b></h4>
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-dedent"></i></span>
-                                        <input type="text" class="form-control" placeholder="Nombre" name="" id="" value="0" required>
+                                        <input type="text" class="form-control" placeholder="Nombre" name="direccion_numeroInterior" id="direccion_numeroInterior" value="0" required>
                                         </div>
                                     
                                     <h4 class="box-title" ><b>Departamento</b></h4>
-                                            <input type="radio" name="r1" class="minimal" name="" id="" value="" required>SI
-                                            <input type="radio" name="r1" class="minimal" checked="" name="" id="" value="" required>NO
+                                            <input type="radio" class="minimal" name="direccion_departamento" id="direccion_departamento" value="" required>SI
+                                            <input type="radio" class="minimal" checked="" name="direccion_departamento" id="direccion_departamento" value="" required>NO
                                             <ins class="iCheck-helper"></ins>
                                     <h4 class="box-title" ><b>Referencia</b></h4>
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-dedent"></i></span>
-                                        <input type="text" class="form-control" placeholder="Referencias de tu domicilio" name="" id="" value="" required>
+                                        <input type="text" class="form-control" placeholder="Referencias de tu domicilio" name="direccion_referencia" id="direccion_referencia" value="" required>
                                         </div>
                                     <h4 class="box-title" ><b>Codigo postal</b></h4>
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-dedent"></i></span>
-                                        <input type="number" class="form-control" placeholder="CP" name="" id="" value="" required>
+                                        <input type="number" class="form-control" placeholder="CP" name="direccion_cp" id="direccion_cp" value="" required>
                                         </div>
                                     <h4 class="box-title" ><b>Colonia</b></h4>
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-dedent"></i></span>
-                                        <input type="text" class="form-control" placeholder="Colonia" name="" id="" value="" required>
+                                        <input type="text" class="form-control" placeholder="Colonia" name="direccion_colonia" id="direccion_colonia" value="" required>
                                         </div>
                                     <h4 class="box-title" ><b>Entidad federativa</b></h4>
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-dedent"></i></span>
-                                        <input type="text" class="form-control" placeholder="Ciudad donde vive" name="" id="" value="" required>
+                                        <input type="text" class="form-control" placeholder="Ciudad donde vive" name="direccion_entidadFederativa" id="direccion_entidadFederativa" value="" required>
                                         </div>
                                     <h4 class="box-title" ><b>Municipio</b></h4>
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-dedent"></i></span>
-                                        <input type="text" class="form-control" placeholder="Municipio" name="" id="" value="" required>
+                                        <input type="text" class="form-control" placeholder="Municipio" name="direccion_municipio" id="direccion_municipio" value="" required>
                                         </div>
                                     <h4 class="box-title" ><b>Localidad</b></h4>
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-dedent"></i></span>
-                                        <input type="text" class="form-control" placeholder="Localidad" name="" id="" value="" required>
+                                        <input type="text" class="form-control" placeholder="Localidad" name="direccion_localidad" id="direccion_localidad" value="" required>
                                         </div>
                                 </div>
                             </div>

@@ -15,8 +15,10 @@ class Actividad_model extends CI_Model {
     public function search($i)
     {
         $query = $this->db->query(
-                'SELECT * '
+                'SELECT actividades.*,estudiante.*,maestros.*'
                 . 'FROM actividades '
+                . 'INNER JOIN estudiante ON actividades.estudiante_id = estudiante.estudiante_id '
+                . 'INNER JOIN maestros ON actividades.maestros_id = maestros.maestros_id '
                 . 'WHERE actividades_id='.$i.';');
   	return $query->result_array();
         
