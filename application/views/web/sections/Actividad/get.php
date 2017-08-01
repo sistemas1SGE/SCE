@@ -23,9 +23,11 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Razón social</th>
-                            <th>Nombre comercial</th>
-                            <th>Telefono</th>
+                            <th>Nombre</th>
+                            <th>Cupo</th>
+                            <th>Horario</th>
+                            <th>Estudiante</th>
+                            <th>Maestros</th>
                             <th></th>
                             <th></th>
                             <th></th>
@@ -33,19 +35,21 @@
                         </tr>
                     </thead>
                     <tbody>
-                    <?php for ($a=0;$a<5;$a++) { ?>
+                    <?php foreach ($get as $a) { ?>
                         <tr>
-                            <td><?php echo $a;?></td>
-                            <td><b><?php echo $a;?></b></td>
-                            <td><b><?php echo $a;?></b></td>
-                            <td><?php echo $a;?></td>
+                            <td><?php echo $a['actividades_id'];?></td>
+                            <td><b><?php echo $a['actividades_nombre'];?></b></td>
+                            <td><b><?php echo $a['actividades_cupo'];?></b></td>
+                            <td><?php echo $a['actividades_horario'];?></td>
+                            <td><b><?php echo $a['estudiante_nombre'];?></b></td>
+                            <td><?php echo $a['maestros_id'];?></td>
                             <td>
                                 <button type="button" class="btn btn-default btn-sm" onclick="">
                                     <i class="fa fa-file-pdf-o"></i>
                                 </button>
                             </td>
                             <td>
-                                <button type="button" class="btn btn-default btn-sm" onclick='window.location.href="<?php echo base_url().'index.php/'.$titulo.'-form/'.$a;?>";'>
+                                <button type="button" class="btn btn-default btn-sm" onclick='window.location.href="<?php echo base_url().'index.php/'.$titulo.'-form/'.$a['actividades_id'];?>";'>
                                     <i class="fa fa-pencil"></i>
                                 </button>
                             </td>
@@ -56,7 +60,7 @@
                             </td>
                             <td>
                                 <span class="label bg-gray pull-right">
-                                    <i class="fa fa-institution"></i> <?php echo $a;?>
+                                    <i class="fa fa-institution"></i> <?php echo $a['actividades_id'];?>
                                 </span>
                             </td>
                         </tr>

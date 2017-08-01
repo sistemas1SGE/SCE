@@ -21,6 +21,7 @@ class Actividad extends CI_Controller {
                     'actividades_cupo'      =>  $key['actividades_cupo'],
                     'actividades_horario'   =>  $key['actividades_horario'],
                     'estudiante_id'         =>  $key['estudiante_id'],
+                    'estudiante_nombre'     =>  $key['estudiante_nombre'],
                     'maestros_id'           =>  $key['maestros_id']
                         ));
             }

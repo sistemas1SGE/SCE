@@ -13,7 +13,21 @@
     <div class="row">
         <div class="col-md-9-center">
             <div class="box box-primary">
-            <?php for ($valor=0;$valor<1;$valor++) { ?>
+            <?php 
+            $a['actividades_id']        =  NULL;
+            $a['actividades_nombre']    =  NULL;
+            $a['actividades_cupo']      =  NULL;
+            $a['actividades_horario']   =  NULL;
+            $a['estudiante_id']         =  NULL;
+            $a['maestros_id']           =  NULL;
+            foreach ($get as $key) {
+                    $a['actividades_id']        =  $key['actividades_id'];
+                    $a['actividades_nombre']    =  $key['actividades_nombre'];
+                    $a['actividades_cupo']      =  $key['actividades_cupo'];
+                    $a['actividades_horario']   =  $key['actividades_horario'];
+                    $a['estudiante_id']         =  $key['estudiante_id'];
+                    $a['maestros_id']           =  $key['maestros_id'];
+            } ?>
                 <div class="box box-info" id="from-view">
                     <form id="form" role="form" action="<?php echo base_url().'index.php/'.$titulo.'-proc';?>" method="post" enctype="multipart/form-data">
                         <div class="box-body">
@@ -24,14 +38,14 @@
                                             <div class="input-group-addon">
                                                 <i class="fa fa-futbol-o"></i>
                                             </div>
-                                        <input type="text" class="form-control" placeholder="Actividad" name="actividades_nombre" id="actividades_nombre" value="" required>
+                                        <input type="text" class="form-control" placeholder="Actividad" name="actividades_nombre" id="actividades_nombre" value="<?php echo $a['actividades_nombre'];?>" required>
                                         </div>
                                     <label for="">Cupo</label>
                                         <div class="input-group">
                                             <div class="input-group-addon">
                                                 <i class="fa fa-child"></i>
                                             </div>
-                                        <input type="number" step="any" class="form-control" placeholder="Maximo de alumnos" name="actividades_cupo" id="actividades_cupo" value="" required>
+                                        <input type="number" step="any" class="form-control" placeholder="Maximo de alumnos" name="actividades_cupo" id="actividades_cupo" value="<?php echo $a['actividades_cupo'];?>" required>
                                         </div>
                                     
                                     <div class="form-group">
@@ -41,29 +55,27 @@
                                             <div class="input-group-addon">
                                                 <i class="fa fa-clock-o"></i>
                                             </div>
-                                            <input type="text" class="form-control pull-right" name="" placeholder="Dia y hora" name="actividades_horario" id="actividades_horario" value="" required>
+                                            <input type="text" class="form-control pull-right" name="" placeholder="Dia y hora" name="actividades_horario" id="actividades_horario" value="<?php echo $a['actividades_horario'];?>" required>
                                         </div>
                                             <!-- /.input group -->
                                     </div>
                                 </div>
                             <div class="col-xs-6">
                                 <label for="contacto_nombre">Alumno</label>
-                                    <select class="form-control select2 select2-hidden-accessible" data-placeholder="Selecciona alumno" style="width: 100%;" tabindex="-1" aria-hidden="true" name="estudiante_nombre" id="estudiante_nombre" value="" required>
-                                        <option>Luis</option>
-                                        <option>Maria</option>
-                                        <option>Domm</option>
-                                        <option>Carlos</option>
-                                        <option>Laura</option>
-                                        <option>Matias</option>
+                                    <select class="form-control select2 select2-hidden-accessible" data-placeholder="Selecciona alumno" style="width: 100%;" tabindex="-1" aria-hidden="true" name="estudiante_nombre" id="estudiante_nombre" required>
+                                        <?php for ($b=0;$b<10;$b++){
+                                            echo '<option value="'.$b.'"';
+                                            if($b == $a['estudiante_id']){ echo 'selected'; }
+                                            echo '>'.$b.'</option>';
+                                        } ?>
                                     </select>
 				<label for="empresa_email2">Profesor</label>
-                                    <select class="form-control select2 select2-hidden-accessible" data-placeholder="Selecciona profesor" style="width: 100%;" tabindex="-1" aria-hidden="true" name="maestros_nombres" id="maestros_nombres" value="" required>
-                                        <option>Luis</option>
-                                        <option>Maria</option>
-                                        <option>Domm</option>
-                                        <option>Carlos</option>
-                                        <option>Laura</option>
-                                        <option>Matias</option>
+                                    <select class="form-control select2 select2-hidden-accessible" data-placeholder="Selecciona profesor" style="width: 100%;" tabindex="-1" aria-hidden="true" name="maestros_nombres" id="maestros_nombres" required>
+                                        <?php for ($b=0;$b<10;$b++){
+                                            echo '<option value="'.$b.'"';
+                                            if($b == $a['maestros_id']){ echo 'selected'; }
+                                            echo '>'.$b.'</option>';
+                                        } ?>
                                     </select>
 				<br/>
                             </div>
@@ -80,7 +92,6 @@
                     <br/>
 		</form>
             </div>
-	<?php } ?>
 	</div>
     </div>
 </div>

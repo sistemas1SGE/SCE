@@ -8,17 +8,16 @@ class Actividad_model extends CI_Model {
     public function select()
     {
         $query = $this->db->query(
-                'SELECT * '
-                . 'FROM actividades;');
+                'SELECT actividades.*, estudiante.* '
+                . 'FROM actividades '
+                . 'LEFT JOIN estudiante ON estudiante.estudiante_id = actividades.estudiante_id;');
   	return $query->result_array();
     }
     public function search($i)
     {
         $query = $this->db->query(
-                'SELECT actividades.*,estudiante.*,maestros.*'
+                'SELECT actividades.*'
                 . 'FROM actividades '
-                . 'INNER JOIN estudiante ON actividades.estudiante_id = estudiante.estudiante_id '
-                . 'INNER JOIN maestros ON actividades.maestros_id = maestros.maestros_id '
                 . 'WHERE actividades_id='.$i.';');
   	return $query->result_array();
         

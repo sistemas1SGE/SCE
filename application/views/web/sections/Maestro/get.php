@@ -23,9 +23,11 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Razón social</th>
-                            <th>Nombre comercial</th>
-                            <th>Telefono</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Especialidad</th>
+                            <th>Celular</th>
+                            <th>Correo</th>
                             <th></th>
                             <th></th>
                             <th></th>
@@ -33,12 +35,14 @@
                         </tr>
                     </thead>
                     <tbody>
-                    <?php for ($a=0;$a<5;$a++) { ?>
+                    <?php foreach ($get as $a) { ?>
                         <tr>
-                            <td><?php echo $a;?></td>
-                            <td><b><?php echo $a;?></b></td>
-                            <td><b><?php echo $a;?></b></td>
-                            <td><?php echo $a;?></td>
+                            <td><?php echo $a['maestros_id'];?></td>
+                            <td><b><?php echo $a['maestros_nombres'];?></b></td>
+                            <td><b><?php echo $a['maestros_apellidos'];?></b></td>
+                            <td><?php echo $a['maestros_especialidad'];?></td>
+                            <td><b><?php echo $a['contacto_celular'];?></b></td>
+                            <td><?php echo $a['contacto_correo'];?></td>
                             <td>
                                 <button type="button" class="btn btn-default btn-sm" onclick="">
                                     <i class="fa fa-file-pdf-o"></i>
