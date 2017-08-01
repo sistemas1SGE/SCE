@@ -15,11 +15,11 @@ class Maestro_model extends CI_Model {
     public function search($i)
     {
         $query = $this->db->query(
-                'SELECT maestros.*,grupo.*,materias.* '
+                'SELECT maestros.*,contacto.*,direccion.* '
                 . 'FROM maestros '
-                . 'INNER JOIN materias ON maestros.maestros_id = materias.materias_id '
-                . 'INNER JOIN contacto ON administrativo.contacto_id = contacto.contacto_id '
-                . 'WHERE administrativo_id='.$i.';');
+                . 'INNER JOIN contacto ON maestros.contacto_id =contacto.contacto_id '
+                . 'INNER JOIN direccion ON maestros.direccion_id =direccion.direccion_id '
+                . 'WHERE maestros_id='.$i.';');
   	return $query->result_array();
         
     }

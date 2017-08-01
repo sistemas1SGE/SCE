@@ -23,7 +23,7 @@
 	<link rel="stylesheet" href="<?php echo base_url().'assets/';?>AdminLTE/plugins/fullcalendar/fullcalendar.min.css">
         <link rel="stylesheet" href="<?php echo base_url().'assets/';?>AdminLTE/plugins/fullcalendar/fullcalendar.print.css" media="print">
     </head>
-    <body class="hold-transition skin-black-light skin-blue sidebar-mini">
+    <body class="hold-transition skin-blue sidebar-mini">
 	<div class="wrapper">
             <header class="main-header">
                 <a href="#" class="logo">

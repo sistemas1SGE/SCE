@@ -15,7 +15,7 @@ class Grupo_model extends CI_Model {
     public function search($i)
     {
         $query = $this->db->query(
-                'SELECT * '
+                'SELECT grupo.* '
                 . 'FROM grupo '
                 . 'WHERE grupo_id='.$i.';');
   	return $query->result_array();
