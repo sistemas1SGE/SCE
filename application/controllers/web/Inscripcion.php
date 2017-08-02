@@ -16,14 +16,15 @@ class Inscripcion extends CI_Controller {
             $data=array();
             foreach ($get as $key) {
                 array_push($data,array(
-                    'inscripcion_id'        =>  $key['inscripcion_id'],
-                    'inscripcion_folio'     =>  $key['inscripcion_folio'],
-                    'inscripcion_fecha'     =>  $key['inscripcion_fecha'],
-                    'inscripcion_tiket'     =>  $key['inscripcion_tiket'],
-                    'inscripcion_status'    =>  $key['inscripcion_status'],
-                    'estudiante_id'         =>  $key['estudiante_id'],
-                    'tutor_id'              =>  $key['tutor_id'],
-                    'institucion_id'        =>  $key['institucion_id'],
+                    'estudiante_observaciones'          =>  $key['estudiante_observaciones'],
+                    'estudiante_necesidadEducativa'     =>  $key['estudiante_necesidadEducativa'],
+                    'estudiante_id'                     =>  $key['estudiante_id'],
+                    'estudiante_nombre'                 =>  $key['estudiante_nombre'],
+                    'tutor_nombre'                      =>  $key['tutor_nombre'],
+                    'contacto_id'                       =>  $key['contacto_id'],
+                    'contacto_telefono'                 =>  $key['contacto_telefono'],
+                    'contacto_celular'                  =>  $key['contacto_celular'],
+                    'contacto_correo'                   =>  $key['contacto_correo']
                         ));
             }
             $this->load->view('web/templates/head',array('titulo'=>'Inscripcion'));
@@ -78,7 +79,12 @@ class Inscripcion extends CI_Controller {
                     'institucion_director'              =>  $key['institucion_director'],
                     'institucion_turno'                 =>  $key['institucion_turno'],
                     'institucion_telefono'              =>  $key['institucion_telefono'],
-                    'institucion_correo'                =>  $key['institucion_correo']
+                    'institucion_correo'                =>  $key['institucion_correo'],
+                    'contacto_id'                   =>  $key['contacto_id'],
+                    'contacto_telefono'             =>  $key['contacto_telefono'],
+                    'contacto_celular'              =>  $key['contacto_celular'],
+                    'contacto_redesSociales'        =>  $key['contacto_redesSociales'],
+                    'contacto_correo'               =>  $key['contacto_correo']
                         ));
             }
             $this->load->view('web/templates/head',array('titulo'=>'Inscripcion'));

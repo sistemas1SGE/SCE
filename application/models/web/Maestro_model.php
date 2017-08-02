@@ -8,18 +8,21 @@ class Maestro_model extends CI_Model {
     public function select()
     {
         $query = $this->db->query(
-                'SELECT maestros.*,contacto.*,direccion.* '
+                'SELECT maestros.*,contacto.*, direccion.* '
                 . 'FROM maestros '
                 . 'INNER JOIN contacto ON maestros.contacto_id =contacto.contacto_id '
-                . 'INNER JOIN direccion ON maestros.direccion_id =direccion.direccion_id ');
+                . 'INNER JOIN direccion ON maestros.direccion_id =direccion.direccion_id '
+                );
   	return $query->result_array();
     }
     public function search($i)
     {
         $query = $this->db->query(
-                'SELECT maestros.* '
+                'SELECT maestros.*,contacto.*,direccion.* '
                 . 'FROM maestros '
-                . 'WHERE maestros_id='.$i.';');
+                . 'INNER JOIN contacto ON maestros.contacto_id =contacto.contacto_id '
+                . 'INNER JOIN direccion ON maestros.direccion_id =direccion.direccion_id '                
+                . 'WHERE maestros.maestros_id='.$i.';');
   	return $query->result_array();
         
     }

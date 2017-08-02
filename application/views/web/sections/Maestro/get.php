@@ -31,7 +31,6 @@
                             <th></th>
                             <th></th>
                             <th></th>
-                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -49,7 +48,7 @@
                                 </button>
                             </td>
                             <td>
-                                <button type="button" class="btn btn-default btn-sm" onclick='window.location.href="<?php echo base_url().'index.php/'.$titulo.'-form/'.$a;?>";'>
+                                <button type="button" class="btn btn-default btn-sm" onclick='window.location.href="<?php echo base_url().'index.php/'.$titulo.'-form/'.$a['maestros_id'];?>";'>
                                     <i class="fa fa-pencil"></i>
                                 </button>
                             </td>
@@ -57,11 +56,6 @@
                                 <button type="button" class="btn btn-default btn-sm">
                                     <i class="fa fa-trash-o"></i>
                                 </button>
-                            </td>
-                            <td>
-                                <span class="label bg-gray pull-right">
-                                    <i class="fa fa-institution"></i> <?php echo $a;?>
-                                </span>
                             </td>
                         </tr>
                     <?php } ?>

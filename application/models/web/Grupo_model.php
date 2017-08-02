@@ -8,7 +8,7 @@ class Grupo_model extends CI_Model {
     public function select()
     {
         $query = $this->db->query(
-                'SELECT * '
+                'SELECT grupo.* '
                 . 'FROM grupo;');
   	return $query->result_array();
     }

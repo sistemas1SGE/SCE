@@ -23,9 +23,10 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Razón social</th>
-                            <th>Nombre comercial</th>
-                            <th>Telefono</th>
+                            <th>Grupo</th>
+                            <th>Materia</th>
+                            <th>Alumno</th>
+                            <th>Calificacion Total</th>
                             <th></th>
                             <th></th>
                             <th></th>
@@ -33,19 +34,20 @@
                         </tr>
                     </thead>
                     <tbody>
-                    <?php for ($a=0;$a<5;$a++) { ?>
+                    <?php foreach ($get as $a) { ?>
                         <tr>
-                            <td><?php echo $a;?></td>
-                            <td><b><?php echo $a;?></b></td>
-                            <td><b><?php echo $a;?></b></td>
-                            <td><?php echo $a;?></td>
+                            <td><?php echo $a['calificaciones_id'];?></td>
+                            <td><b><?php echo $a['grupo_grado'];?></b></td>
+                            <td><b><?php echo $a['materias_nombre'];?></b></td>
+                            <td><?php echo $a['estudiante_nombre'];?></td>
+                            <td><?php echo $a['calificaciones_total'];?></td>
                             <td>
                                 <button type="button" class="btn btn-default btn-sm" onclick="">
                                     <i class="fa fa-file-pdf-o"></i>
                                 </button>
                             </td>
                             <td>
-                                <button type="button" class="btn btn-default btn-sm" onclick='window.location.href="<?php echo base_url().'index.php/'.$titulo.'-form/'.$a;?>";'>
+                                <button type="button" class="btn btn-default btn-sm" onclick='window.location.href="<?php echo base_url().'index.php/'.$titulo.'-form/'.$a['calificaciones_id'];?>";'>
                                     <i class="fa fa-pencil"></i>
                                 </button>
                             </td>
@@ -55,9 +57,7 @@
                                 </button>
                             </td>
                             <td>
-                                <span class="label bg-gray pull-right">
-                                    <i class="fa fa-institution"></i> <?php echo $a;?>
-                                </span>
+                               
                             </td>
                         </tr>
                     <?php } ?>

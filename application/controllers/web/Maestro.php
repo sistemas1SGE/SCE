@@ -23,7 +23,25 @@ class Maestro extends CI_Controller {
                     'maestros_especialidad'         =>  $key['maestros_especialidad'],
                     'rol_id'                        =>  $key['rol_id'],
                     'contacto_id'                   =>  $key['contacto_id'],
+                    'contacto_telefono'             =>  $key['contacto_telefono'],
+                    'contacto_celular'              =>  $key['contacto_celular'],
+                    'contacto_redesSociales'        =>  $key['contacto_redesSociales'],
+                    'contacto_correo'               =>  $key['contacto_correo'],
                     'direccion_id'                  =>  $key['direccion_id'],
+                    'direccion_calle'               =>  $key['direccion_calle'],
+                    'direccion_entreCalles1'        =>  $key['direccion_entreCalles1'],
+                    'direccion_entreCalles2'        =>  $key['direccion_entreCalles2'],
+                    'direccion_numero'              =>  $key['direccion_numero'],
+                    'direccion_manzana'             =>  $key['direccion_manzana'],
+                    'direccion_lote'                =>  $key['direccion_lote'],
+                    'direccion_numeroInterior'      =>  $key['direccion_numeroInterior'],
+                    'direccion_departamento'        =>  $key['direccion_departamento'],
+                    'direccion_referencia'          =>  $key['direccion_referencia'],
+                    'direccion_cp'                  =>  $key['direccion_cp'],
+                    'direccion_colonia'             =>  $key['direccion_colonia'],
+                    'direccion_entidadFederativa'   =>  $key['direccion_entidadFederativa'],
+                    'direccion_municipio'           =>  $key['direccion_municipio'],
+                    'direccion_localidad'           =>  $key['direccion_localidad']
                         ));
             }
             $this->load->view('web/templates/head',array('titulo'=>'Maestro'));

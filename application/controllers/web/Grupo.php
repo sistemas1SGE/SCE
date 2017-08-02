@@ -16,9 +16,9 @@ class Grupo extends CI_Controller {
             $data=array();
             foreach ($get as $key) {
                 array_push($data,array(
-                    'grupo_id'      =>  $key['grupo_id'],
-                    'grupo_grado'   =>  $key['grupo_grado'],
-                    'grupo_grupo'   =>  $key['grupo_grupo']
+                    'grupo_id'          =>  $key['grupo_id'],
+                    'grupo_grado'       =>  $key['grupo_grado'],
+                    'grupo_grupo'       =>  $key['grupo_grupo']
                         ));
             }
             $this->load->view('web/templates/head',array('titulo'=>'Grupo'));
@@ -35,9 +35,9 @@ class Grupo extends CI_Controller {
             $data=array();
             foreach ($get as $key) {
                 array_push($data,array(
-                    'grupo_id'      =>  $key['grupo_id'],
-                    'grupo_grado'   =>  $key['grupo_grado'],
-                    'grupo_grupo'   =>  $key['grupo_grupo']
+                    'grupo_id'          =>  $key['grupo_id'],
+                    'grupo_grado'       =>  $key['grupo_grado'],
+                    'grupo_grupo'       =>  $key['grupo_grupo']
                         ));
             }
             $this->load->view('web/templates/head',array('titulo'=>'Grupo'));

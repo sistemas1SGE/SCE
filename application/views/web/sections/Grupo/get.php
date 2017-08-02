@@ -23,9 +23,8 @@
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Razón social</th>
-                            <th>Nombre comercial</th>
-                            <th>Telefono</th>
+                            <th>Grado</th>
+                            <th>Grupo</th>
                             <th></th>
                             <th></th>
                             <th></th>
@@ -33,19 +32,19 @@
                         </tr>
                     </thead>
                     <tbody>
-                    <?php for ($a=0;$a<5;$a++) { ?>
+                    <?php foreach ($get as $a) { ?>
                         <tr>
-                            <td><?php echo $a;?></td>
-                            <td><b><?php echo $a;?></b></td>
-                            <td><b><?php echo $a;?></b></td>
-                            <td><?php echo $a;?></td>
+                            <td><?php echo $a['grupo_id'];?></td>
+                            <td><b><?php echo $a['grupo_grado'];?></b></td>
+                            <td><b><?php echo $a['grupo_grupo'];?></b></td>
+                            
                             <td>
                                 <button type="button" class="btn btn-default btn-sm" onclick="">
                                     <i class="fa fa-file-pdf-o"></i>
                                 </button>
                             </td>
                             <td>
-                                <button type="button" class="btn btn-default btn-sm" onclick='window.location.href="<?php echo base_url().'index.php/'.$titulo.'-form/'.$a;?>";'>
+                                <button type="button" class="btn btn-default btn-sm" onclick='window.location.href="<?php echo base_url().'index.php/'.$titulo.'-form/'.$a['grupo_id'];?>";'>
                                     <i class="fa fa-pencil"></i>
                                 </button>
                             </td>
@@ -55,9 +54,7 @@
                                 </button>
                             </td>
                             <td>
-                                <span class="label bg-gray pull-right">
-                                    <i class="fa fa-institution"></i> <?php echo $a;?>
-                                </span>
+                                
                             </td>
                         </tr>
                     <?php } ?>

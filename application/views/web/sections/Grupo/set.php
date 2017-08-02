@@ -13,7 +13,15 @@
     <div class="row">
         <div class="col-md-9-center">
             <div class="box box-primary">
-            <?php for ($valor=0;$valor<1;$valor++) { ?>
+            <?php 
+            $a['grupo_id']        =  NULL;
+            $a['grupo_grado']    =  NULL;
+            $a['grupo_grupo']      =  NULL;
+            foreach ($get as $key) {
+                    $a['grupo_id']        =  $key['grupo_id'];
+                    $a['grupo_grado']    =  $key['grupo_grado'];
+                    $a['grupo_grupo']      =  $key['grupo_grupo'];
+            } ?>
                 <div class="box box-info" id="from-view">
                     <form id="form" role="form" action="<?php echo base_url().'index.php/'.$titulo.'-proc';?>" method="post" enctype="multipart/form-data">
                         <div class="box-body">
@@ -22,9 +30,9 @@
                                     <div class="form-group breadcrumb text-blue">
                                         <h4><b>Grado y grupo</b></h4>
                                         <label for="contacto_nombre">Grado</label>
-                                            <input type="number" class="form-control" placeholder="0" name="grupo_grado" id="grupo_grado" value="" required>
+                                            <input type="number" class="form-control" placeholder="0" name="grupo_grado" id="grupo_grado" value="<?php echo $a['grupo_grado'];?>" required>
 					<label for="contacto_apellidoMaterno">Grupo</label>
-                                            <input type="text" class="form-control" placeholder="A" name="grupo_grupo" id="grupo_grupo" value="" required>
+                                            <input type="text" class="form-control" placeholder="A" name="grupo_grupo" id="grupo_grupo" value="<?php echo $a['grupo_grupo'];?>" required>
                                     </div>
                                 </div>
                             </div>
@@ -40,7 +48,7 @@
                         <br/>
                     </form>
                 </div>
-	<?php } ?>
+	
 	</div>
     </div>
 </div>

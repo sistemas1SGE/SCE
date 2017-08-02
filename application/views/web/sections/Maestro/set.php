@@ -172,8 +172,8 @@
                                         </div>
                                     
                                     <h4 class="box-title" ><b>Departamento</b></h4>
-                                            <input type="radio" class="minimal" name="direccion_departamento" id="direccion_departamento" value="<?php echo $a['direccion_departamento'];?>" required>SI
-                                            <input type="radio" class="minimal" checked="" name="direccion_departamento" id="direccion_departamento" value="<?php echo $a['direccion_departamento'];?>" required>NO
+                                            <input type="radio" class="minimal" name="direccion_departamento" id="direccion_departamento" value="" required>SI
+                                            <input type="radio" class="minimal" checked="" name="direccion_departamento" id="direccion_departamento" value="" required>NO
                                             <ins class="iCheck-helper"></ins>
                                     <h4 class="box-title" ><b>Referencia</b></h4>
                                         <div class="input-group">
