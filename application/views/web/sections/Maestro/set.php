@@ -130,7 +130,7 @@
                                     <h4 class="box-title"><b>Correo</b></h4>
                                         <div class="input-group">
                                             <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                                            <input type="email" class="form-control" placeholder="Email" name="contacto_correo" id="contacto_correo" value="<?php echo $a['contacto_correo'];?>">
+                                            <input type="email" class="form-control" placeholder="Email" name="contacto_correo" id="contacto_correo" value="<?php echo $a['contacto_correo'];?>" required>
                                         </div>
                                 </div> 
                                 <div class="col-xs-12">
@@ -212,11 +212,15 @@
 			<button type="button" class="btn btn-danger" onclick="window.location.href='<?php echo base_url().'index.php/'.$titulo.'-info';?>';" title="Cancelar">
                             <i class="fa fa-close"> Cancelar</i>
 			</button>
-			<button type="submit" form="form" value="Submit" class="btn btn-info" title="Guardar">
+			<button type="submit" class="btn btn-info" name="submit" form="form" value="submit" >
                             <i class="fa fa-save"> Guardar</i>
 			</button>
                     </div>
                     <br/>
+                    <input type="number" name="maestros_id" id="actividades_id" value="<?php echo $a['maestros_id'];?>" style="display: none;">
+                    <input type="number" name="rol_id" id="actividades_id" value="<?php echo $a['rol_id'];?>" style="display: none;">
+                    <input type="number" name="contacto_id" id="actividades_id" value="<?php echo $a['contacto_id'];?>" style="display: none;">
+                    <input type="number" name="direccion_id" id="actividades_id" value="<?php echo $a['direccion_id'];?>" style="display: none;">
                     </form>
                 </div>
 	

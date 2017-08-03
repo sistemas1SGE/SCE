@@ -23,12 +23,11 @@ class Grupo_model extends CI_Model {
     }
     public function insert($data)
     {
-        $query = $this->db->query('call set_Grupo('.$data.')');
-        return $query;
+        $this->db->insert('grupo',$data);
     }
     public function update($data)
     {
-        $query = $this->db->query('call set_Grupo('.$data.')');
-        return $query;
+        $this->db->where('grupo_id', $data['grupo_id']);
+        $this->db->update('grupo', $data); 
     }
 }

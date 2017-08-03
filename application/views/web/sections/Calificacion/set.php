@@ -48,7 +48,7 @@
                                     <div class="box box-default">
                                         <div class="box-header with-border">
                                             <label><b>Grupo</b></label>
-                                                <div class="form-group">
+                                                <div class="form-group" name="grupo_id" id="grupo_id">
                                                     <select>
                                                         <?php for ($b=0;$b<10;$b++){
                                                             echo '<option value="'.$b.'"';
@@ -58,11 +58,11 @@
                                                     </select>
                                                 </div>
                                             <label><b>Materia</b></label>
-                                                <div class="form-group">
+                                                <div class="form-group" name="materias_id" id="materias_id">
                                                     <select>
                                                         <?php for ($b=0;$b<10;$b++){
                                                             echo '<option value="'.$b.'"';
-                                                            if($b == $a['materias_nombre']){ echo 'selected'; }
+                                                            if($b == $a['materias_id']){ echo 'selected'; }
                                                             echo '>'.$b.'</option>';
                                                         } ?>
                                                     </select>
@@ -131,11 +131,12 @@
                             <button type="button" class="btn btn-danger" onclick="window.location.href='<?php echo base_url().'index.php/'.$titulo.'-info';?>';" title="Cancelar">
                                 <i class="fa fa-close"> Cancelar</i>
                             </button>
-                            <button type="submit" form="form" value="Submit" class="btn btn-info" title="Guardar">
-                                <i class="fa fa-save"> Guardar</i>
-                            </button>
+                            <button type="submit" class="btn btn-info" name="submit" form="form" value="submit" >
+                            <i class="fa fa-save"> Guardar</i>
+			</button>
                         </div>
                         <br/>
+                        <input type="number" name="calificaciones_id" id="actividades_id" value="<?php echo $a['calificaciones_id'];?>" style="display: none;">
                     </form>
                 </div>
             

@@ -26,8 +26,8 @@
     <body class="hold-transition skin-blue sidebar-mini">
 	<div class="wrapper">
             <header class="main-header">
-                <a href="#" class="logo">
-                    <img src="<?php echo base_url().'assets/';?>img/logo.jpg" class="logo-lg" width="215" height="50" alt="">
+                <a href="" class="logo">
+                    <img src="<?php echo base_url().'assets/';?>img/logo.jpg" class="logo-lg" width="90" height="70" alt="">
                 </a>
                 <nav class="navbar navbar-static-top">
                     <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
@@ -38,13 +38,13 @@
                             <li class="dropdown user user-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                   <img src="<?php echo base_url().'assets/';?>AdminLTE/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                                  <span class="hidden-xs"><?php echo 'NetWeb';?></span>
+                                  <span class="hidden-xs"><?php echo 'Admin';?></span>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li class="user-header">
                                         <img src="<?php echo base_url().'assets/';?>AdminLTE/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                                         <p>
-                                          <?php echo 'NetWeb'.' - '.'Web Developer';?>
+                                          <?php echo 'Admin'.' - '.'Web Developer';?>
                                           <small><?php echo 'Miembro desde: '.'2017';?></small>
                                         </p>
                                     </li>
@@ -66,7 +66,7 @@
                     <img src="<?php echo base_url().'assets/';?>AdminLTE/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p><?php echo 'NetWeb';?></p>
+                    <p><?php echo 'Admin';?></p>
                     <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 </div>
             </div>
@@ -100,13 +100,14 @@
                         <span>Calificaciones</span>
                     </a>
                 </li>
-                <!-- -->
+                <!-- 
                 <li>
                     <a href="<?php echo base_url().'index.php/';?>Materia-info" id="empr_button">
                         <i class="fa fa-pencil-square"></i>
                         <span>Materias</span>
                     </a>
                 </li>
+                -->
                 <!-- -->
                 <li>
                     <a href="<?php echo base_url().'index.php/';?>Grupo-info" id="empr_button">
@@ -114,34 +115,32 @@
                         <span>Grupos</span>
                     </a>
                 </li>
-                <!-- -->
+                <!-- 
                 <li>
                     <a href="<?php echo base_url().'index.php/';?>Administrativo-info" id="empr_button">
                         <i class="fa fa-cog"></i>
                         <span>Administrativo</span>
                     </a>
                 </li>
-                <!-- -->
                 <li>
                     <a href="<?php echo base_url().'index.php/';?>EstudianteTutor-info" id="empr_button">
                         <i class="fa fa-user"></i>
                         <span>Estudiantes / Tutores</span>
                     </a>
                 </li>
-                <!-- -->
                 <li>
                     <a href="<?php echo base_url().'index.php/';?>Rol-info" id="empr_button">
                         <i class="fa fa-shield"></i>
                         <span>Roles</span>
                     </a>
                 </li>
-                <!-- -->
                 <li>
                     <a href="<?php echo base_url().'index.php/';?>Objeto-info" id="empr_button">
                         <i class="fa fa-lock"></i>
                         <span>Objetos</span>
                     </a>
                 </li>
+                -->
                 <!--
                 <li class="treeview">
                     <a href="" id="pros_button">

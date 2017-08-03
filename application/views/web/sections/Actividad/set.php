@@ -55,14 +55,14 @@
                                             <div class="input-group-addon">
                                                 <i class="fa fa-clock-o"></i>
                                             </div>
-                                            <input type="text" class="form-control pull-right" name="" placeholder="Dia y hora" name="actividades_horario" id="actividades_horario" value="<?php echo $a['actividades_horario'];?>" required>
+                                            <input type="text" class="form-control pull-right" placeholder="Dia y hora" name="actividades_horario" id="actividades_horario" value="<?php echo $a['actividades_horario'];?>" required>
                                         </div>
                                             <!-- /.input group -->
                                     </div>
                                 </div>
                             <div class="col-xs-6">
                                 <label for="contacto_nombre">Alumno</label>
-                                    <select class="form-control select2 select2-hidden-accessible" data-placeholder="Selecciona alumno" style="width: 100%;" tabindex="-1" aria-hidden="true" name="estudiante_nombre" id="estudiante_nombre" required>
+                                    <select class="form-control select2 select2-hidden-accessible" data-placeholder="Selecciona alumno" style="width: 100%;" tabindex="-1" aria-hidden="true" name="estudiante_id" id="estudiante_id" required>
                                         <?php for ($b=0;$b<10;$b++){
                                             echo '<option value="'.$b.'"';
                                             if($b == $a['estudiante_id']){ echo 'selected'; }
@@ -70,7 +70,7 @@
                                         } ?>
                                     </select>
 				<label for="empresa_email2">Profesor</label>
-                                    <select class="form-control select2 select2-hidden-accessible" data-placeholder="Selecciona profesor" style="width: 100%;" tabindex="-1" aria-hidden="true" name="maestros_nombres" id="maestros_nombres" required>
+                                    <select class="form-control select2 select2-hidden-accessible" data-placeholder="Selecciona profesor" style="width: 100%;" tabindex="-1" aria-hidden="true" name="maestros_id" id="maestros_id" required>
                                         <?php for ($b=0;$b<10;$b++){
                                             echo '<option value="'.$b.'"';
                                             if($b == $a['maestros_id']){ echo 'selected'; }
@@ -85,11 +85,12 @@
 			<button type="button" class="btn btn-danger" onclick="window.location.href='<?php echo base_url().'index.php/'.$titulo.'-info';?>';" title="Cancelar">
                             <i class="fa fa-close"> Cancelar</i>
 			</button>
-			<button type="submit" form="form" value="Submit" class="btn btn-info" title="Guardar">
+                        <button type="submit" class="btn btn-info" name="submit" form="form" value="submit" >
                             <i class="fa fa-save"> Guardar</i>
 			</button>
                     </div>
                     <br/>
+                    <input type="number" name="actividades_id" id="actividades_id" value="<?php echo $a['actividades_id'];?>" style="display: none;">
 		</form>
             </div>
 	</div>

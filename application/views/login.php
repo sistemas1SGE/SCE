@@ -16,17 +16,17 @@
   <!-- /.login-logo -->
   <div class="login-box-body">
     <div class="login-logo">
-      <img src="<?php echo base_url().'assets/';?>img/logo.jpg" class="logo-lg" width="300" height="75" alt="">
+      <img src="<?php echo base_url().'assets/';?>img/logo.jpg" class="logo-lg" width="90" height="70" alt="">
     </div>
     <p class="login-box-msg">Login</p>
 
     <form action="<?php echo base_url().'index.php/'.'Actividad-info';?>" method="post">
       <div class="form-group has-feedback">
-        <input type="email" class="form-control" placeholder="Email">
+        <input type="email" class="form-control" placeholder="Email" required>
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password">
+        <input type="password" class="form-control" placeholder="Password" required>
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">

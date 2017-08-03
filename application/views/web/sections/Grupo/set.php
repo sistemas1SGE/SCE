@@ -41,11 +41,12 @@
                             <button type="button" class="btn btn-danger" onclick="window.location.href='<?php echo base_url().'index.php/'.$titulo.'-info';?>';" title="Cancelar">
                                 <i class="fa fa-close"> Cancelar</i>
                             </button>
-                            <button type="submit" form="form" value="Submit" class="btn btn-info" title="Guardar">
-                                <i class="fa fa-save"> Guardar</i>
-                            </button>
+                            <button type="submit" class="btn btn-info" name="submit" form="form" value="submit" >
+                            <i class="fa fa-save"> Guardar</i>
+			</button>
                         </div>
                         <br/>
+                        <input type="number" name="grupo_id" id="actividades_id" value="<?php echo $a['grupo_id'];?>" style="display: none;">
                     </form>
                 </div>
 	

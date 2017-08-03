@@ -57,11 +57,15 @@ class Grupo extends CI_Controller {
                     'grupo_grado'   =>  $this->input->post('grupo_grado'),
                     'grupo_grupo'   =>  $this->input->post('grupo_grupo')
                         );
-                if($data['grupo_id'] == '0'){
-                    $query = $this->Grupo_model->insert($data);
+                if($data['grupo_id'] == 0){
+                    $this->Grupo_model->insert($data);
+                    $msg = 'Exito al insertar grupo';
                 }else{
-                    $query = $this->Grupo_model->update($data);
+                    $this->Grupo_model->update($data);
+                    $msg = 'Exito al actualizar grupo';
                 }
+                }else{
+                $msg = 'Fracaso al insertar grupo';
             }
             if(isset($query) && $query){
                 $valid=true;
@@ -70,7 +74,7 @@ class Grupo extends CI_Controller {
                 $valid=false;
                 $msg="";                
             }
-            $this->load->view('web/sections/Grupo/pro',array('titulo'=>'Grupo','valid'=>$valid,'msg'=>$msg));
+            $this->load->view('web/sections/Grupo/pro',array('titulo'=>'Grupo','msg' => $msg));
             $this->load->view('web/templates/foot');
         }else{
             redirect(base_url().'index.php/'.'Sign-in');

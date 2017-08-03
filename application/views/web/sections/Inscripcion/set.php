@@ -5,7 +5,7 @@
 	</h1>
 	<ol class="breadcrumb">
 		<li><a href="<?php echo base_url();?>inicio"><i class="fa fa-dashboard"></i>Inicio</a></li>
-		<li class="active"><a href="<?php echo base_url();?>empresas">Empresas</a></li>
+		<li class="active"><a href="<?php echo base_url();?>empresas">Inscripcion</a></li>
 		<li class="active">Edit</li>
 	</ol>
 </section>
@@ -339,7 +339,7 @@
                                         </div>
                                     
                                     <h4 class="box-title" ><b>Departamento</b></h4>
-                                            <input type="radio" name="r1" class="minimal" name="" id="" value="" required>SI
+                                            <input type="radio" name="r1" class="minimal" name="direccion_departamento" id="direccion_departamento" value="" required>SI
                                             <input type="radio" name="r1" class="minimal" checked="" name="direccion_departamento" id="direccion_departamento" value="" required>NO
                                             <ins class="iCheck-helper"></ins>
                                     <h4 class="box-title" ><b>Referencia</b></h4>
@@ -378,11 +378,12 @@
                                 <button type="button" class="btn btn-danger" onclick="window.location.href='<?php echo base_url().'index.php/'.$titulo.'-info';?>';" title="Cancelar">
                                     <i class="fa fa-close"> Cancelar</i>
                                 </button>
-                                <button type="submit" form="form" value="Submit" class="btn btn-info" title="Guardar">
-                                    <i class="fa fa-save"> Guardar</i>
-                                </button>
+                                <button type="submit" class="btn btn-info" name="submit" form="form" value="submit" >
+                            <i class="fa fa-save"> Guardar</i>
+			</button>
                             </div>
                             <br/>
+                            <input type="number" name="inscripcion_id" id="actividades_id" value="<?php echo $a['inscripcion_id'];?>" style="display: none;">
                             </form>
                         </div>
                         

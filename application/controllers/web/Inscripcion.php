@@ -140,20 +140,17 @@ class Inscripcion extends CI_Controller {
                     'institucion_telefono'              =>  $this->input->post('institucion_telefono'),
                     'institucion_correo'                =>  $this->input->post('institucion_correo')
                         );
-                if($data['inscripcion_id'] == '0'){
-                    $query = $this->Inscripcion_model->insert($data);
+                if($data['inscripcion_id'] == 0){
+                    $this->Incripcion_model->insert($data);
+                    $msg = 'Exito al insertar inscripcion';
                 }else{
-                    $query = $this->Inscripcion_model->update($data);
+                    $this->Incripcion_model->update($data);
+                    $msg = 'Exito al actualizar incripcion';
                 }
-            }
-            if(isset($query) && $query){
-                $valid=true;
-                $msg="";
             }else{
-                $valid=false;
-                $msg="";                
+                $msg = 'Fracaso al insertar datos';                
             }
-            $this->load->view('web/sections/Inscripcion/pro',array('titulo'=>'Inscripcion','valid'=>$valid,'msg'=>$msg));
+            $this->load->view('web/sections/Inscripcion/pro',array('titulo'=>'Inscripcion','msg' => $msg));
             $this->load->view('web/templates/foot');
         }else{
             redirect(base_url().'index.php/'.'Sign-in');

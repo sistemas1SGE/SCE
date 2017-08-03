@@ -31,12 +31,11 @@ class Calificacion_model extends CI_Model {
     }
     public function insert($data)
     {
-        $query = $this->db->query('call set_Calificacion('.$data.')');
-        return $query;
+        $this->db->insert('calificaciones',$data);
     }
     public function update($data)
     {
-        $query = $this->db->query('call set_Calificacion('.$data.')');
-        return $query;
+        $this->db->where('calificaciones_id', $data['calificaciones_id']);
+        $this->db->update('calificaciones', $data); 
     }
 }

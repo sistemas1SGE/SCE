@@ -82,28 +82,18 @@ class Calificacion extends CI_Controller {
                     'calificaciones_cuartoMes'      =>  $this->input->post('calificaciones_cuartoMes'),
                     'calificaciones_quintoMes'      =>  $this->input->post('calificaciones_quintoMes'),
                     'calificaciones_sextoMes'       =>  $this->input->post('calificaciones_sextoMes'),
-                    'calificaciones_total'          =>  $this->input->post('calificaciones_total'),
-                    'grupo_id'                      =>  $this->input->post('grupo_id'),
-                    'grupo_grado'                   =>  $this->input->post('grupo_grado'),
-                    'materias_id'                   =>  $this->input->post('materias_id'),
-                    'materias_nombre'               =>  $this->input->post('materias_nombre'),
-                    'estudiante_id'                 =>  $this->input->post('estudiante_id'),
-                    'estudiante_nombre'             =>  $this->input->post('estudiante_nombre')
                         );
-                if($data['calificacion_id'] == '0'){
-                    $query = $this->Calificacion_model->insert($data);
+                if($data['calificaciones_id'] == 0){
+                    $this->Calificacion_model->insert($data);
+                    $msg = 'Exito al insertar calificacion';
                 }else{
-                    $query = $this->Calificacion_model->update($data);
+                    $this->Calificacion_model->update($data);
+                    $msg = 'Exito al actualizar calificacion';
                 }
-            }
-            if(isset($query) && $query){
-                $valid=true;
-                $msg="";
             }else{
-                $valid=false;
-                $msg="";                
+                $msg = 'Fracaso al insertar calificacion';                
             }
-            $this->load->view('web/sections/Calificacion/pro',array('titulo'=>'Calificacion','valid'=>$valid,'msg'=>$msg));
+            $this->load->view('web/sections/Calificacion/pro',array('titulo'=>'Calificacion','msg' => $msg));
             $this->load->view('web/templates/foot');
         }else{
             redirect(base_url().'index.php/'.'Sign-in');

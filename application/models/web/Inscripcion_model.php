@@ -31,12 +31,11 @@ class Inscripcion_model extends CI_Model {
     }
     public function insert($data)
     {
-        $query = $this->db->query('call set_Inscripcion('.$data.')');
-        return $query;
+        $this->db->insert('inscripcion',$data);
     }
     public function update($data)
     {
-        $query = $this->db->query('call set_Inscripcion('.$data.')');
-        return $query;
+        $this->db->where('inscripcion_id', $data['inscripcion_id']);
+        $this->db->update('inscripcion', $data); ;
     }
 }

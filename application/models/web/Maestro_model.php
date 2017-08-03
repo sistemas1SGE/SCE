@@ -28,12 +28,11 @@ class Maestro_model extends CI_Model {
     }
     public function insert($data)
     {
-        $query = $this->db->query('call set_Maestro('.$data.')');
-        return $query;
+        $this->db->insert('maestros',$data);
     }
     public function update($data)
     {
-        $query = $this->db->query('call set_Maestro('.$data.')');
-        return $query;
+        $this->db->where('maestros_id', $data['maestros_id']);
+        $this->db->update('maestros', $data); 
     }
 }

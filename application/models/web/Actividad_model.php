@@ -24,12 +24,11 @@ class Actividad_model extends CI_Model {
     }
     public function insert($data)
     {
-        $query = $this->db->query('call set_Actividad('.$data.')');
-        return $query;
+        $this->db->insert('actividades',$data);
     }
     public function update($data)
     {
-        $query = $this->db->query('call set_Actividad('.$data.')');
-        return $query;
+        $this->db->where('actividades_id', $data['actividades_id']);
+        $this->db->update('actividades', $data); 
     }
 }

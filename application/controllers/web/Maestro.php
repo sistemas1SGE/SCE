@@ -106,40 +106,20 @@ class Maestro extends CI_Controller {
                     'maestros_especialidad'         =>  $this->input->post('maestros_especialidad'),
                     'rol_id'                        =>  $this->input->post('rol_id'),
                     'contacto_id'                   =>  $this->input->post('contacto_id'),
-                    'contacto_telefono'             =>  $this->input->post('contacto_telefono'),
-                    'contacto_celular'              =>  $this->input->post('contacto_celular'),
-                    'contacto_redesSociales'        =>  $this->input->post('contacto_redesSociales'),
-                    'contacto_correo'               =>  $this->input->post('contacto_correo'),
-                    'direccion_id'                  =>  $this->input->post('direccion_id'),
-                    'direccion_calle'               =>  $this->input->post('direccion_calle'),
-                    'direccion_entreCalles1'        =>  $this->input->post('direccion_entreCalles1'),
-                    'direccion_entreCalles2'        =>  $this->input->post('direccion_entreCalles2'),
-                    'direccion_numero'              =>  $this->input->post('direccion_numero'),
-                    'direccion_manzana'             =>  $this->input->post('direccion_manzana'),
-                    'direccion_lote'                =>  $this->input->post('direccion_lote'),
-                    'direccion_numeroInterior'      =>  $this->input->post('direccion_numeroInterior'),
-                    'direccion_departamento'        =>  $this->input->post('direccion_departamento'),
-                    'direccion_referencia'          =>  $this->input->post('direccion_referencia'),
-                    'direccion_cp'                  =>  $this->input->post('direccion_cp'),
-                    'direccion_colonia'             =>  $this->input->post('direccion_colonia'),
-                    'direccion_entidadFederativa'   =>  $this->input->post('direccion_entidadFederativa'),
-                    'direccion_municipio'           =>  $this->input->post('direccion_municipio'),
-                    'direccion_localidad'           =>  $this->input->post('direccion_localidad')
+                    'direccion_id'                  =>  $this->input->post('direccion_id')
+                    
                         );
-                if($data['maestros_id'] == '0'){
-                    $query = $this->Maestro_model->insert($data);
+                if($data['maestros_id'] == 0){
+                    $this->Maestro_model->insert($data);
+                    $msg = 'Exito al insertar Maestros';
                 }else{
-                    $query = $this->Maestro_model->update($data);
+                    $this->Maestro_model->update($data);
+                    $msg = 'Exito al actualizar Maestro';
                 }
-            }
-            if(isset($query) && $query){
-                $valid=true;
-                $msg="";
             }else{
-                $valid=false;
-                $msg="";                
+                $msg = 'Fracaso al insertar maestro';                
             }
-            $this->load->view('web/sections/Maestro/pro',array('titulo'=>'Maestro','valid'=>$valid,'msg'=>$msg));
+            $this->load->view('web/sections/Maestro/pro',array('titulo'=>'Maestro','msg' => $msg));
             $this->load->view('web/templates/foot');
         }else{
             redirect(base_url().'index.php/'.'Sign-in');

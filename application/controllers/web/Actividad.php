@@ -67,20 +67,17 @@ class Actividad extends CI_Controller {
                     'estudiante_id'         =>  $this->input->post('estudiante_id'),
                     'maestros_id'           =>  $this->input->post('maestros_id'),
                         );
-                if($data['actividades_id'] == '0'){
-                    $query = $this->Actividad_model->insert($data);
+                if($data['actividades_id'] == 0){
+                    $this->Actividad_model->insert($data);
+                    $msg = 'Exito al insertar actividad';
                 }else{
-                    $query = $this->Actividad_model->update($data);
+                    $this->Actividad_model->update($data);
+                    $msg = 'Exito al actualizar actividad';
                 }
-            }
-            if(isset($query) && $query){
-                $valid=true;
-                $msg="";
             }else{
-                $valid=false;
-                $msg="";                
+                $msg = 'Fracaso al insertar datos';                
             }
-            $this->load->view('web/sections/Actividad/pro',array('titulo'=>'Actividad','valid'=>$valid,'msg'=>$msg));
+            $this->load->view('web/sections/Actividad/pro',array('titulo'=>'Actividad','msg' => $msg));
             $this->load->view('web/templates/foot');
         }else{
             redirect(base_url().'index.php/'.'Sign-in');
